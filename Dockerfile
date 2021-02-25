@@ -1,4 +1,4 @@
-FROM php:7.4-fpm-alpine
+FROM php:8-fpm-alpine
 
 
 ENV PATH="~/.composer/vendor/bin:./vendor/bin:${PATH}" \
@@ -41,7 +41,7 @@ RUN docker-php-ext-install gd && \
     docker-php-ext-install zip && \
     docker-php-ext-configure intl && \
     docker-php-ext-install intl && \
-    pecl install amqp && \
+    pecl install https://github.com/0x450x6c/php-amqp/raw/7323b3c9cc2bcb8343de9bb3c2f31f6efbc8894b/amqp-1.10.3.tgz && \
     docker-php-ext-enable amqp && \
     pecl install mailparse && \
     docker-php-ext-enable mailparse && \
