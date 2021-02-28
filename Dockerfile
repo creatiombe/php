@@ -26,6 +26,7 @@ RUN apk --no-cache update && \
     rabbitmq-c \
     rabbitmq-c-dev \
     libmemcached-dev \
+    imagemagick \
     imagemagick-dev \
     ttf-dejavu ttf-droid ttf-freefont ttf-liberation ttf-ubuntu-font-family \
     wkhtmltopdf
