@@ -26,6 +26,7 @@ RUN apk --no-cache update && \
     rabbitmq-c \
     rabbitmq-c-dev \
     libmemcached-dev \
+    imagemagick-dev \
     ttf-dejavu ttf-droid ttf-freefont ttf-liberation ttf-ubuntu-font-family \
     wkhtmltopdf
 
@@ -41,6 +42,8 @@ RUN docker-php-ext-install gd && \
     docker-php-ext-install zip && \
     docker-php-ext-configure intl && \
     docker-php-ext-install intl && \
+    pecl install imagick && \
+    docker-php-ext-enable imagick && \
     pecl install amqp && \
     docker-php-ext-enable amqp && \
     pecl install mailparse && \
